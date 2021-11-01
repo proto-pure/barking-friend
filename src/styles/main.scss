@@ -1,0 +1,80 @@
+@import-normalize;
+@import './skeleton.min.css';
+
+:root {
+  --page-background: #fff;
+  --header: #111;
+  --header-nav-separator: #d8d8d8;
+  --header-nav-active-element: #299ecc;
+  --input-text: inherit;
+  --input-border: #d1d1d1;
+  --input-background: #fff;
+  --input-focus-border: #33c3f0;
+  --link: #1eaedb;
+  --button-favorites-color: #555;
+  --button-favorites-border: #bbb;
+  --button-favorites-background: transparent;
+  --button-favorites-hover-color: #333;
+  --button-favorites-hover-border: #888;
+  --button-favorites-hover-background: transparent;
+  --image-breed-border: #d3d3d3;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page-background: #202124;
+    --header: #bdc1c6;
+    --input-text: #fff;
+    --input-border: hsl(0, 0%, 18.82%);
+    --input-background: hsl(0, 0%, 7%);
+    --input-focus-border: #{darken(#33c3f0, 25)};
+    --link: #{lighten(#1eaedb, 10)};
+    --button-favorites-color: #c8c8c8;
+    --button-favorites-border: #808080;
+    --button-favorites-background: #000;
+    --button-favorites-hover-color: #{lighten(#c8c8c8, 15)};
+    --button-favorites-hover-border: #{lighten(#808080, 15)};
+    --button-favorites-hover-background: #{lighten(#000, 15)};
+    --image-breed-border: #808080;
+
+    .button-primary {
+      color: #fff;
+      border-color: #1eaedb;
+      background-color: #1eaedb;
+
+      &:hover {
+        color: #{lighten(#fff, 10)};
+        border-color: #{darken(#1eaedb, 10)};
+        background-color: #{darken(#1eaedb, 10)};
+      }
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--page-background);
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & > div:not(:first-child) {
+    margin-top: 20px;
+  }
+}
+
+a {
+  color: var(--link);
+}

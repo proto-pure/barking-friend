@@ -1,0 +1,28 @@
+.breedImageWrapper {
+  width: 300px;
+  text-align: center;
+}
+
+.breedImage {
+  width: 100%;
+  display: block;
+  border: 1px solid var(--image-breed-border);
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.button {
+  margin: 10px 0;
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--button-favorites-color);
+  border-color: var(--button-favorites-border);
+  background-color: var(--button-favorites-background);
+
+  &:hover {
+    color: var(--button-favorites-hover-color);
+    border-color: var(--button-favorites-hover-border);
+    background-color: var(--button-favorites-hover-background);
+  }
+}
